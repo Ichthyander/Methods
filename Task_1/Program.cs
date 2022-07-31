@@ -26,13 +26,17 @@ namespace Task_1
             double a1 = Convert.ToDouble(Console.ReadLine());
             double b1 = Convert.ToDouble(Console.ReadLine());
             double c1 = Convert.ToDouble(Console.ReadLine());
-            double area1 = CalcTriangleArea(a1, b1, c1);            
+            double area1 = CalcTriangleArea(a1, b1, c1);
+            Console.WriteLine("Площадь первого треугольника - {0:.00}", area1);
+            Console.WriteLine();
             
             Console.WriteLine("Введите стороны второго треугольника");
             double a2 = Convert.ToDouble(Console.ReadLine());
             double b2 = Convert.ToDouble(Console.ReadLine());
             double c2 = Convert.ToDouble(Console.ReadLine());
-            double area2 = CalcTriangleArea(a1, b1, c1);
+            double area2 = CalcTriangleArea(a2, b2, c2);
+            Console.WriteLine("Площадь второго треугольника - {0:.00}", area2);
+            Console.WriteLine();
 
             if (area1 > area2)
             {
@@ -42,9 +46,13 @@ namespace Task_1
             {
                 Console.WriteLine("Площадь второго треугольника больше площади первого");
             }
-            else
+            else if(area1 == area2)
             {
                 Console.WriteLine("Площади равны");
+            }
+            else
+            {
+                Console.WriteLine("ОШИБКА! Проверьте правильность набора данных и возможность построения треугольника с указанными сторонами");
             }
 
             Console.ReadKey();
